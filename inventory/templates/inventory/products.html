@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block header %}
+{% include "partials/navbar.html" %}
+{% endblock header %}
+
+{% block main %}
+<div class="min-h-dvh grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 pt-20 px-10 bg-stone-900 justify-items-center">
+    {% for product in products %}
+        {% include "partials/product.html" with product=product %}
+    {% endfor %}
+
+</div>
+{% endblock main %}

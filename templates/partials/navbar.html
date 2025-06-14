@@ -1,0 +1,18 @@
+<nav class="z-50 fixed tracking-tight text-white text-xl flex flex-row justify-around items-center h-14 w-full">
+    <div
+        class="relative  py-1 px-4 rounded-2xl before:transition-all before:duration-500 before:absolute before:bottom-0  before:h-1 before:w-0 hover:before:w-full before:bg-orange-900 before:-z-10 before:rounded-2xl">
+        <a href="{% url 'index' %}">Home</a>
+    </div>
+    <div
+        class="relative  py-1 px-4 rounded-2xl before:transition-all before:duration-500 before:absolute before:bottom-0  before:h-1 before:w-0 hover:before:w-full before:bg-orange-900 before:-z-10 before:rounded-2xl">
+        <a href="{% url 'products-list' %}">Products</a>
+    </div>
+    <div
+        class="relative  py-1 px-4 rounded-2xl before:transition-all before:duration-500 before:absolute before:bottom-0  before:h-1 before:w-0 hover:before:w-full before:bg-orange-900 before:-z-10 before:rounded-2xl">
+        <a href="{% url 'contactus' %}">Contact Us</a>
+    </div>
+    <div
+        class="relative  py-1 px-4 rounded-2xl before:transition-all before:duration-500 before:absolute before:bottom-0  before:h-1 before:w-0 hover:before:w-full before:bg-orange-900 before:-z-10 before:rounded-2xl">
+        <a href="{% url 'about' %}">About</a>
+    </div>
+</nav>

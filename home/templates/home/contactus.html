@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block header %}
+    {% include "partials/navbar.html" %}
+{% endblock header %}
+
+{% block main %}
+    <div class="h-dvh w-dvw bg-stone-900 flex justify-center items-center">
+        <div class="h-full grid grid-rows-3 grid-cols-1 p-10 gap-10
+                    sm:grid-rows-1 sm:grid-cols-2 sm:min-h-fit sm:max-h-[600px] sm:border  sm:max-w-screen-lg sm:items-center  sm:shadow-2xl
+            ">
+            <div class="text-white flex flex-col gap-5 items-start justify-center  row-start-1 row-span-1
+                         sm:row-start-1 sm:col-start-1 sm:col-span-1 sm:row-span-1
+                ">
+                <h1 class="text-5xl font-bold"> Contact Us </h1>
+                <p class="text-lg tracking-tight"> Feel free to send us a message. we here at <span
+                        class="font-bold">Suit<span class="text-amber-700">Me</span></span> would love to hear your
+                    feedback.</p>
+            </div>
+            <form class="flex flex-col gap-10 row-start-2 row-span-full text-white tacking-tight
+                         sm:row-start-1 sm:col-start-2 sm:col-span-1 sm:row-span-1
+                ">
+                <div class="">
+                    <label for="name" class="block"> Name </label>
+                    <input type="text" id="name" placeholder="Enter your name"
+                        class="rounded-lg text-stone-500 bg-gray-100 py-2 px-4 w-full placeholder:text-stone-500" />
+                </div>
+                <div>
+                    <label for="email" class="block"> Email </label>
+                    <input type="text" id="email" placeholder="Enter your email"
+                        class="text-stone-500 bg-gray-100 py-2 px-4 w-full placeholder:text-stone-500 rounded-lg" />
+                </div>
+                <div>
+                    <label for="message" class="block"> Message </label>
+                    <textarea id="message" name="message" rows="4" cols="50"
+                        class="rounded-lg text-stone-500 bg-gray-100 py-2 px-4 w-full" />Type your message
+                    here</textarea>
+                </div>
+                <button type="button"
+                    class="w-full rounded-lg bg-orange-900 py-5 hover:cursor-pointer hover:bg-orange-800 transition-all duration-200">
+                    Send </button>
+            </form>
+
+        </div>
+    </div>
+{% endblock main %}
+
+

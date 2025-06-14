@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block header %}
+    {% include "partials/navbar.html" %}
+{% endblock header %}
+
+{% block main %}
+    <div class="h-dvh  relative">
+        <img src="../static/images/suit.jpg" class="h-full w-full object-cover" />
+        <div class="absolute inset-0 flex flex-col items-center justify-center gap-2 md:leading-none z-10">
+            <h2 class="text-5xl font-bold tracking-tight text-white"> Suit<span class="text-orange-900">Me</span> </h2>
+            <h2 class="text-5xl font-bold tracking-tight text-white"> You deserve the best </h2>
+            <p class="text-lg tracking-tight text-white     py-1 px-4">High
+            quality
+            suits.
+            Simple and
+            Elegant.</p>
+        </div>
+
+    </div>
+{% endblock main %}
+
+
