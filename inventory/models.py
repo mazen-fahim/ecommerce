@@ -61,7 +61,7 @@ class Product(models.Model):
     )
 
     tags = models.ManyToManyField(Tag)
-    image = models.ImageField(upload_to="uploads/%Y/%M/%D", null=True)
+    image = models.ImageField(upload_to="uploads/%Y/%m/%d", null=True)
 
     def __str__(self):
         return str(self.name)

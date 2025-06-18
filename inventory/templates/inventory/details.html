@@ -30,6 +30,10 @@
                 <p class="text-[#beae9d] text-sm font-normal leading-normal">Color</p>
                 <p class="text-white text-sm font-normal leading-normal">{{ product.colors }} </p>
             </div>
+            <div class="col-span-2 grid grid-cols-subgrid border-t border-t-[#5c4d3d] py-5">
+                <p class="text-[#beae9d] text-sm font-normal leading-normal">Image</p>
+                <img src="{{ product.image.url }}" class="w-[100px] h-[100px] rounded-full object-cover" />
+            </div>
         </div>
         <div class="flex px-4 py-3 justify-start">
             <button
