@@ -1,24 +1,30 @@
 <html>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" -->
-    <!--     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" -->
-    <!--     crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-</head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+        <link
+                rel="stylesheet"
+                as="style"
+                onload="this.rel='stylesheet'"
+                href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+                />
+    </head>
 
-<body>
-    <header>
-        {% block header %}
-        {% endblock header %}
-    </header>
-    <main>
-        {% block main %}
-        {% endblock main %}
-    </main>
+    <body class="bg-[231A10] font-[Inter]">
+        <div class="w-dvw">
+            <header>
+                {% block header %}
+                {% endblock header %}
+            </header>
+            <main>
+                {% block main %}
+                {% endblock main %}
+            </main>
+        </div>
 
-</body>
+    </body>
 
 </html>

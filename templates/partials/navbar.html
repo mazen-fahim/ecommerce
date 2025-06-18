@@ -1,18 +1,73 @@
-<nav class="z-50 fixed tracking-tight text-white text-xl flex flex-row justify-around items-center h-14 w-full">
-    <div
-        class="relative  py-1 px-4 rounded-2xl before:transition-all before:duration-500 before:absolute before:bottom-0  before:h-1 before:w-0 hover:before:w-full before:bg-orange-900 before:-z-10 before:rounded-2xl">
-        <a href="{% url 'index' %}">Home</a>
+<!-- <nav class="flex flex-row justify-between px-4 tracking-tight text-white text-base h-12 w-full border-b-[#493622] border-b-1"> -->
+<!--     <div class="flex flex-row items-center font-bold tracking-normal text-xl"> -->
+<!--         <a href="{% url 'home:index' %}"> -->
+<!--         <h1>Suit<span class="text-orange-900">Me<span></h1> -->
+<!--         </a> -->
+<!--     </div> -->
+<!--     <div class="flex flex-row items-center justify-center gap-6"> -->
+<!--         <div -->
+<!--             class="relative  py-1 px-4 rounded-2xl before:transition-all before:duration-500 before:absolute before:bottom-0  before:h-1 before:w-0 hover:before:w-full before:bg-orange-900  before:rounded-2xl"> -->
+<!--             <a href="{% url 'home:index' %}">Home</a> -->
+<!--         </div> -->
+<!--         <div -->
+<!--             class="relative  py-1 px-4 rounded-2xl before:transition-all before:duration-500 before:absolute before:bottom-0  before:h-1 before:w-0 hover:before:w-full before:bg-yellow-600  before:rounded-2xl"> -->
+<!--             <a href="{% url 'dashboard:index' %}">Dashboard</a> -->
+<!--         </div> -->
+<!--         <div -->
+<!--             class="relative  py-1 px-4 rounded-2xl before:transition-all before:duration-500 before:absolute before:bottom-0  before:h-1 before:w-0 hover:before:w-full before:bg-yellow-600  before:rounded-2xl"> -->
+<!--             <a href="{% url 'inventory:index' %}">Products</a> -->
+<!--         </div> -->
+<!--         <div -->
+<!--             class="relative  py-1 px-4 rounded-2xl before:transition-all before:duration-500 before:absolute before:bottom-0  before:h-1 before:w-0 hover:before:w-full before:bg-yellow-600  before:rounded-2xl"> -->
+<!--             <a href="{% url 'home:contactus' %}">Contact Us</a> -->
+<!--         </div> -->
+<!--         <div -->
+<!--             class="relative  py-1 px-4 rounded-2xl before:transition-all before:duration-500 before:absolute before:bottom-0  before:h-1 before:w-0 hover:before:w-full before:bg-yellow-600  before:rounded-2xl"> -->
+<!--             <a href="{% url 'home:about' %}">About</a> -->
+<!--         </div> -->
+<!--     </div> -->
+<!-- </nav> -->
+<nav class="{% if request.path == "/" %} fixed z-20  {% endif %} w-full flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#493622] px-10 py-3">
+    <div class="flex items-center gap-4 text-white">
+        <a href="{% url 'home:index' %}" class="text-white text-2xl font-bold leading-tight tracking-[-0.015em]">Suit<span class="text-yellow-600">Up</span></a>
     </div>
-    <div
-        class="relative  py-1 px-4 rounded-2xl before:transition-all before:duration-500 before:absolute before:bottom-0  before:h-1 before:w-0 hover:before:w-full before:bg-orange-900 before:-z-10 before:rounded-2xl">
-        <a href="{% url 'products-list' %}">Products</a>
-    </div>
-    <div
-        class="relative  py-1 px-4 rounded-2xl before:transition-all before:duration-500 before:absolute before:bottom-0  before:h-1 before:w-0 hover:before:w-full before:bg-orange-900 before:-z-10 before:rounded-2xl">
-        <a href="{% url 'contactus' %}">Contact Us</a>
-    </div>
-    <div
-        class="relative  py-1 px-4 rounded-2xl before:transition-all before:duration-500 before:absolute before:bottom-0  before:h-1 before:w-0 hover:before:w-full before:bg-orange-900 before:-z-10 before:rounded-2xl">
-        <a href="{% url 'about' %}">About</a>
+    <div class="flex flex-1 justify-end gap-8">
+        <div class="flex items-center gap-9">
+        <div
+            class="relative  py-1 px-4 rounded-2xl before:transition-all before:duration-500 before:absolute before:bottom-0  before:h-1 before:w-0 hover:before:w-full before:bg-yellow-600  before:rounded-2xl">
+            <a class="text-white text-sm font-medium leading-normal" href="{% url 'home:index' %}">Home</a>
+        </div>
+        <div
+            class="relative  py-1 px-4 rounded-2xl before:transition-all before:duration-500 before:absolute before:bottom-0  before:h-1 before:w-0 hover:before:w-full before:bg-yellow-600  before:rounded-2xl">
+            <a class="text-white text-sm font-medium leading-normal" href="{% url 'dashboard:index' %}">Dashboard</a>
+        </div>
+        <!-- <div -->
+        <!--     class="relative  py-1 px-4 rounded-2xl before:transition-all before:duration-500 before:absolute before:bottom-0  before:h-1 before:w-0 hover:before:w-full before:bg-yellow-600  before:rounded-2xl"> -->
+        <!--     <a class="text-white text-sm font-medium leading-normal" href="{% url 'inventory:index' %}">Products</a> -->
+        <!-- </div> -->
+        <div
+            class="relative  py-1 px-4 rounded-2xl before:transition-all before:duration-500 before:absolute before:bottom-0  before:h-1 before:w-0 hover:before:w-full before:bg-yellow-600  before:rounded-2xl">
+            <a class="text-white text-sm font-medium leading-normal" href="{% url 'home:contactus' %}">Contact Us</a>
+        </div>
+        <div
+            class="relative  py-1 px-4 rounded-2xl before:transition-all before:duration-500 before:absolute before:bottom-0  before:h-1 before:w-0 hover:before:w-full before:bg-yellow-600  before:rounded-2xl">
+            <a class="text-white text-sm font-medium leading-normal" href="{% url 'home:about' %}">About</a>
+        </div>
+        </div>
+        <button
+                class="hover:bg-yellow-600 flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 bg-[#493622] text-white gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5"
+                >
+                <div class="text-white" data-icon="Bell" data-size="20px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                        <path
+                                d="M221.8,175.94C216.25,166.38,208,139.33,208,104a80,80,0,1,0-160,0c0,35.34-8.26,62.38-13.81,71.94A16,16,0,0,0,48,200H88.81a40,40,0,0,0,78.38,0H208a16,16,0,0,0,13.8-24.06ZM128,216a24,24,0,0,1-22.62-16h45.24A24,24,0,0,1,128,216ZM48,184c7.7-13.24,16-43.92,16-80a64,64,0,1,1,128,0c0,36.05,8.28,66.73,16,80Z"
+                                ></path>
+                    </svg>
+                </div>
+        </button>
+        <div
+                class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB11NtXXsP1dkHm-r-0Tpv7ilQ4NuAUme-rrFBXB4Yua7e6EI_Q2wxkFx_YVEEXoxbPtqMNcJJHVh9Dao9tVkk82fzEKatSWAmSqPRq9999LaHC68q1DoVS4y2NzMWOK03ytZfXmWN5ISdlgw3m4oIO-FeFji_swT4fhmdEwWU4i6rZNCSZaqXvKVCEEs4hkzVmJcGyefNBOWb3ALpc9W6jE29SlQFynw6QcrkDMS8MJ4B8IVR9-AUOAiwzO2Y0t6hGco_t1IKb0OYJ");'
+                ></div>
     </div>
 </nav>

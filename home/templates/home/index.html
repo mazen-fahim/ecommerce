@@ -5,10 +5,11 @@
 {% endblock header %}
 
 {% block main %}
-    <div class="h-dvh  relative">
+<div class="h-dvh overflow-y-scroll  snap-mandatory snap-y">
+    <div class="snap-start h-dvh  relative">
         <img src="../static/images/suit.jpg" class="h-full w-full object-cover" />
         <div class="absolute inset-0 flex flex-col items-center justify-center gap-2 md:leading-none z-10">
-            <h2 class="text-5xl font-bold tracking-tight text-white"> Suit<span class="text-orange-900">Me</span> </h2>
+            <h2 class="text-5xl font-bold tracking-tight text-white"> Suit<span class="text-yellow-600">Up</span> </h2>
             <h2 class="text-5xl font-bold tracking-tight text-white"> You deserve the best </h2>
             <p class="text-lg tracking-tight text-white     py-1 px-4">High
             quality
@@ -16,8 +17,34 @@
             Simple and
             Elegant.</p>
         </div>
+    </div>
+
+    <div class="snap-start h-dvh ">
+
+<section class="py-16 px-4 sm:px-8 md:px-16 pt-24 ">
+  <h2 class="text-4xl font-serif font-semibold text-center text-yellow-600 mb-12">Best Sellers</h2>
+
+  <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 justify-center items-center place-items-center">
+    {% for product in products %}
+    <!-- Card 1 -->
+    <div class="bg-[#342618] rounded-xl max-w-[300px] overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 px-6 pt-6">
+        <img src="" alt="{{ product.name }}" class="w-full h-52 object-cover">
+      <div class="py-6 text-white">
+          <h3 class="text-2xl font-serif text-[#d4af37] mb-2">{{ product.name }}</h3>
+          <p class="text-sm mb-4 text-gray-300">{{ product.description }}</p>
+        <div class="flex justify-between items-center">
+            <span class="text-lg font-semibold text-[#d4af37]">${{ product.price }}</span>
+            <a href = "{% url 'inventory:details' pk=product.id %}" class="bg-yellow-600 text-[#1c1b18] px-4 py-1 rounded hover:bg-[#c5a32f] font-medium">View</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
 
     </div>
+
+</div>
 {% endblock main %}
 
 

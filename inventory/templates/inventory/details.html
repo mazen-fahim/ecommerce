@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block header %}
+{% include "partials/navbar.html" %}
+{% endblock header %}
+
+{% block main %}
+<div class="px-40 flex flex-1 justify-center py-5">
+    <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+        <div class="flex flex-wrap justify-between gap-3 p-4">
+            <div class="flex min-w-72 flex-col gap-3">
+                <p class="text-white tracking-light text-[32px] font-bold leading-tight">{{ product.name }}</p>
+                <p class="text-[#beae9d] text-sm font-normal leading-normal">{{ product.description }}.</p>
+            </div>
+        </div>
+        <div class="p-4 grid grid-cols-[20%_1fr] gap-x-6">
+            <div class="col-span-2 grid grid-cols-subgrid border-t border-t-[#5c4d3d] py-5">
+                <p class="text-[#beae9d] text-sm font-normal leading-normal">Price</p>
+                <p class="text-white text-sm font-normal leading-normal">{{ product.price }}$</p>
+            </div>
+            <div class="col-span-2 grid grid-cols-subgrid border-t border-t-[#5c4d3d] py-5">
+                <p class="text-[#beae9d] text-sm font-normal leading-normal">Size</p>
+                <p class="text-white text-sm font-normal leading-normal">{{ product.size }}</p>
+            </div>
+            <div class="col-span-2 grid grid-cols-subgrid border-t border-t-[#5c4d3d] py-5">
+                <p class="text-[#beae9d] text-sm font-normal leading-normal">Material</p>
+                <p class="text-white text-sm font-normal leading-normal">{{ product.material }}</p>
+            </div>
+            <div class="col-span-2 grid grid-cols-subgrid border-t border-t-[#5c4d3d] py-5">
+                <p class="text-[#beae9d] text-sm font-normal leading-normal">Color</p>
+                <p class="text-white text-sm font-normal leading-normal">{{ product.colors }} </p>
+            </div>
+        </div>
+        <div class="flex px-4 py-3 justify-start">
+            <button
+                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#f3e8dc] text-[#1f1a14] text-sm font-bold leading-normal tracking-[0.015em]">
+                <span class="truncate">Add to Cart</span>
+            </button>
+        </div>
+    </div>
+</div>
+{% endblock main %}

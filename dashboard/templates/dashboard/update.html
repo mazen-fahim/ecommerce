@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load tailwind_filters %}
+
+{% block header %}
+{% include "partials/navbar.html" %}
+{% endblock header %}
+
+{% block main %}
+<div class="w-full max-w-2xl mt-10 sm:px-6 lg:px-8 mx-auto !text-white">
+    <form method="POST">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <div class="mx-auto flex justify-center mt-8">
+            <button class="w-full p-4 rounded-xl bg-orange-900 hover:cursor-pointer hover:bg-orange-500"> Add </button>
+        </div>
+    </form>
+</div>
+{% endblock main %}
