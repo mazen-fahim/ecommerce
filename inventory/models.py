@@ -22,9 +22,21 @@ material_choices = {
     "Linen": "Linen",
 }
 
+tag_choices = {
+    "Power": "Power",
+    "Velvet": "Velvet",
+    "Sleek": "Sleek",
+    "Drift": "Drift",
+    "Wool": "Wool",
+    "Heritage": "Heritage",
+    "Phantom": "Phantom",
+}
 
-class Tags(models.Model):
-    name = models.CharField(max_length=100, null=False, blank=False)
+
+class Tag(models.Model):
+    name = models.CharField(
+        max_length=100, null=False, blank=False, choices=list(tag_choices.items())
+    )
 
     def __str__(self):
         return self.name
@@ -48,7 +60,8 @@ class Product(models.Model):
         size=10,
     )
 
-    categories = models.ManyToManyField(Tags)
+    tags = models.ManyToManyField(Tag)
+    image = models.ImageField(upload_to="uploads/%Y/%M/%D", null=True)
 
     def __str__(self):
         return str(self.name)
