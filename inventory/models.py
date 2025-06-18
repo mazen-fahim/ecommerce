@@ -23,6 +23,13 @@ material_choices = {
 }
 
 
+class Tags(models.Model):
+    name = models.CharField(max_length=100, null=False, blank=False)
+
+    def __str__(self):
+        return self.name
+
+
 class Product(models.Model):
     name = models.CharField(max_length=100, null=False, blank=False)
     price = models.IntegerField(null=False, blank=False)
@@ -40,6 +47,8 @@ class Product(models.Model):
         ),
         size=10,
     )
+
+    categories = models.ManyToManyField(Tags)
 
     def __str__(self):
         return str(self.name)
